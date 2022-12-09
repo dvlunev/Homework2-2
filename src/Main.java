@@ -167,62 +167,62 @@ public class Main {
         );
 
         // Задание 3-1, 3-2
-        Car.Key ladaGrantaKey = ladaGranta.new Key(
+        ladaGranta.setKey(new Car.Key(
                 false,
                 false
-        );
-        ladaGranta.setKey(ladaGrantaKey);
-        Car.Key audiA8Key = audiA8.new Key(
+        ));
+        //ladaGranta.setKey(ladaGrantaKey);
+        audiA8.setKey(new Car.Key(
                 null,
                 null
-        );
-        audiA8.setKey(audiA8Key);
-        Car.Key bmwZ8Key = bmwZ8.new Key(
+        ));
+        //audiA8.setKey(audiA8Key);
+        bmwZ8.setKey(new Car.Key(
                 true,
                 true
-        );
-        bmwZ8.setKey(bmwZ8Key);
-        Car.Key kiaSportageKey = kiaSportage.new Key(
+        ));
+        //bmwZ8.setKey(bmwZ8Key);
+        kiaSportage.setKey(new Car.Key(
                 true,
                 false
-        );
-        kiaSportage.setKey(kiaSportageKey);
-        Car.Key hyundaiAvanteKey = hyundaiAvante.new Key(
+        ));
+        //kiaSportage.setKey(kiaSportageKey);
+        hyundaiAvante.setKey(new Car.Key(
                 false,
                 true
-        );
-        hyundaiAvante.setKey(hyundaiAvanteKey);
+        ));
+        //hyundaiAvante.setKey(hyundaiAvanteKey);
 
-        Car.Insurance ladaGrantaIns = ladaGranta.new Insurance(
+        ladaGranta.setInsurance(new Car.Insurance(
                 LocalDate.now(),
                 2_000,
                 "654874657"
-        );
-        ladaGranta.setInsurance(ladaGrantaIns);
-        Car.Insurance audiA8Ins = audiA8.new Insurance(
+        ));
+        //ladaGranta.setInsurance(ladaGrantaIns);
+        audiA8.setInsurance(new Car.Insurance(
                 null,
                 null,
                 null
-        );
-        audiA8.setInsurance(audiA8Ins);
-        Car.Insurance bmwZ8Ins = bmwZ8.new Insurance(
+        ));
+        //audiA8.setInsurance(audiA8Ins);
+        bmwZ8.setInsurance(new Car.Insurance(
                 LocalDate.of(2022,01,01),
                 -5,
                 "88888888"
-        );
-        bmwZ8.setInsurance(bmwZ8Ins);
-        Car.Insurance kiaSportageIns = kiaSportage.new Insurance(
+        ));
+        //bmwZ8.setInsurance(bmwZ8Ins);
+        kiaSportage.setInsurance(new Car.Insurance(
                 LocalDate.of(2020,01,01),
                 5_000,
                 "687616657"
-        );
-        kiaSportage.setInsurance(kiaSportageIns);
-        Car.Insurance hyundaiAvanteIns = hyundaiAvante.new Insurance(
+        ));
+        //kiaSportage.setInsurance(kiaSportageIns);
+        hyundaiAvante.setInsurance(new Car.Insurance(
                 LocalDate.EPOCH,
                 -5,
                 "-4"
-        );
-        hyundaiAvante.setInsurance(hyundaiAvanteIns);
+        ));
+        //hyundaiAvante.setInsurance(hyundaiAvanteIns);
 
         System.out.println(ladaGranta);
         System.out.println(audiA8);
@@ -232,9 +232,9 @@ public class Main {
         System.out.println();
         hyundaiAvante.changeTires(12);
         System.out.println(hyundaiAvante);
-        kiaSportageIns.printValidityControl();
-        ladaGrantaIns.printValidityControl();
-        bmwZ8Ins.printNumberControl();
-        hyundaiAvanteIns.printNumberControl();
+        kiaSportage.getInsurance().printValidityControl();
+        ladaGranta.getInsurance().printValidityControl();
+        bmwZ8.getInsurance().printNumberControl();
+        hyundaiAvante.getInsurance().printNumberControl();
     }
 }

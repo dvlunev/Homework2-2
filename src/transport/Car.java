@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Car {
 
-    public class Key {
+    public static class Key {
         private final Boolean remoteEngineStart;
         private final Boolean lessEntry;
 
@@ -28,7 +28,7 @@ public class Car {
         }
     }
 
-    public class Insurance {
+    public static class Insurance {
         private final LocalDate validity;
         private final Integer price;
         private final String number;
@@ -64,7 +64,8 @@ public class Car {
             if (validity.isBefore(LocalDate.now())) {
                 System.out.println("Ваша страховка просрочена, необходимо срочно оформить новую страховку!");
             } else if (validity.equals(LocalDate.now())) {
-                System.out.println("Ваша страховка заканчивается в этом году, не забудьте оформить новую страховку!");
+                System.out.println("Ваша страховка заканчивается сегодня, проверьте срок окончания и не забудьте " +
+                        "оформить новую страховку!");
             }
         }
 
@@ -198,6 +199,10 @@ public class Car {
 
     public void setInsurance(Insurance insurance) {
         this.insurance = insurance;
+    }
+
+    public Insurance getInsurance() {
+        return insurance;
     }
 
     public boolean isWinterTires() {
